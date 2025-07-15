@@ -1,18 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmoh0ll07msl6"]
+[gd_scene load_steps=6 format=3 uid="uid://cmoh0ll07msl6"]
 
 [ext_resource type="Script" uid="uid://b6g0ng8lkb56g" path="res://Objects/Player/Player.gd" id="1_we6tp"]
 [ext_resource type="Texture2D" uid="uid://f1x5wvjrejn4" path="res://Assets/Ball.png" id="2_oansn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_oansn"]
-bounce = 0.7
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oansn"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cac6a"]
 radius = 8.0
 
 [node name="Player" type="RigidBody2D"]
 collision_layer = 16
 physics_material_override = SubResource("PhysicsMaterial_oansn")
 gravity_scale = 0.7
+continuous_cd = 1
 script = ExtResource("1_we6tp")
 
 [node name="Sprite" type="Sprite2D" parent="."]
@@ -20,3 +24,10 @@ texture = ExtResource("2_oansn")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_oansn")
+
+[node name="Area" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Area"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_cac6a")
