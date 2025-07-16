@@ -42,7 +42,7 @@ func _process(delta : float) -> void:
 			inAir = true
 			coyoteTime.start(COYOTE_TIME)
 	
-	if Input.is_action_just_pressed("UP"):
+	if Input.is_action_pressed("UP"):
 		jumpBuffer.start(JUMP_BUFFER_TIME)
 	
 	if not jumpBuffer.is_stopped():
