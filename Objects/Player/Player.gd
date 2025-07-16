@@ -16,6 +16,7 @@ const COYOTE_TIME : float = 0.08
 
 #endregion
 
+var health : int = 5
 var lastVelocity : Vector2 = Vector2(0, 0)
 var inAir : bool = false
 
@@ -51,3 +52,9 @@ func _process(delta : float) -> void:
 	
 	lastVelocity = velocity
 	move_and_slide()
+
+func OnHitboxAreaEntered(area : Area2D) -> void:
+	health -= 1
+	if health <= 0:
+		print("DEAD!!!")
+	print(health)

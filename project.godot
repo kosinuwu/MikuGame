@@ -54,6 +54,7 @@ RIGHT={
 
 2d_physics/layer_1="Environment"
 2d_physics/layer_5="Player"
+2d_physics/layer_10="Spike"
 
 [rendering]
 

@@ -1,9 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmoh0ll07msl6"]
+[gd_scene load_steps=5 format=3 uid="uid://cmoh0ll07msl6"]
 
 [ext_resource type="Script" uid="uid://b6g0ng8lkb56g" path="res://Objects/Player/Player.gd" id="1_we6tp"]
 [ext_resource type="Texture2D" uid="uid://f1x5wvjrejn4" path="res://Assets/Ball.png" id="2_oansn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oansn"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cac6a"]
 radius = 8.0
 
 [node name="Player" type="CharacterBody2D"]
@@ -21,3 +24,12 @@ one_shot = true
 
 [node name="CoyoteTime" type="Timer" parent="."]
 one_shot = true
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 512
+
+[node name="Shape" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_cac6a")
+
+[connection signal="area_entered" from="Hitbox" to="." method="OnHitboxAreaEntered"]
