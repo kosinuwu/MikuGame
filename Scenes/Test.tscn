@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://cweylmdqfhc0e"]
+[gd_scene load_steps=6 format=4 uid="uid://cweylmdqfhc0e"]
 
 [ext_resource type="TileSet" uid="uid://c1tjm0iyu8vta" path="res://Assets/Tileset.tres" id="1_ko2s7"]
 [ext_resource type="PackedScene" uid="uid://cmoh0ll07msl6" path="res://Objects/Player/Player.tscn" id="2_gxb1y"]
 [ext_resource type="PackedScene" uid="uid://etlnwcfygl54" path="res://Objects/Camera/Camera.tscn" id="3_0dy5s"]
 [ext_resource type="PackedScene" uid="uid://sy8r6e67j1ig" path="res://Objects/Spike/Spike.tscn" id="4_f2nln"]
+[ext_resource type="PackedScene" uid="uid://ceo4q5viusm88" path="res://Objects/HUD/HUD.tscn" id="5_j5jx5"]
 
 [node name="Test" type="Node2D"]
 metadata/_edit_lock_ = true
@@ -21,3 +22,18 @@ player = NodePath("../Player")
 
 [node name="Spike" parent="." instance=ExtResource("4_f2nln")]
 position = Vector2(145, 153)
+
+[node name="Spike2" parent="." instance=ExtResource("4_f2nln")]
+position = Vector2(185, 136)
+
+[node name="Spike3" parent="." instance=ExtResource("4_f2nln")]
+position = Vector2(233, 105)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("5_j5jx5")]
+offset_left = 10.0
+offset_top = 3.0
+offset_right = 10.0
+offset_bottom = 3.0
+metadata/_edit_lock_ = true

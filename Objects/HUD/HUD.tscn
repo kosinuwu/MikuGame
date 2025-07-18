@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceo4q5viusm88"]
+
+[ext_resource type="Script" uid="uid://dm6do86slmlhw" path="res://Objects/HUD/hud.gd" id="1_bi6vh"]
+[ext_resource type="Texture2D" uid="uid://cvyxx1ts1y8kp" path="res://Assets/BallUI.png" id="2_n2k1d"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bi6vh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_n2k1d")
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_n2k1d")
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_n2k1d")
