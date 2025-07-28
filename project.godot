@@ -55,6 +55,8 @@ RIGHT={
 2d_physics/layer_1="Environment"
 2d_physics/layer_5="Player"
 2d_physics/layer_10="Spike"
+2d_physics/layer_15="Checkpoint"
+2d_physics/layer_17="Ring"
 
 [rendering]
 

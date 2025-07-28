@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwj3w0uyvsg8d"]
+
+[ext_resource type="Texture2D" uid="uid://clfy770re53me" path="res://Assets/Background.png" id="1_5eyng"]
+[ext_resource type="Texture2D" uid="uid://dt4ws6q26w4xs" path="res://Assets/Clouds.png" id="1_kfpa8"]
+[ext_resource type="Texture2D" uid="uid://cs6evry742l1k" path="res://Assets/MountainsFore.png" id="2_wkhmk"]
+[ext_resource type="Texture2D" uid="uid://djtdx5pt4w1vo" path="res://Assets/MountainsBack.png" id="3_ng023"]
+
+[node name="Background" type="Node2D"]
+z_index = -50
+
+[node name="Layer0" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(320, 0)
+
+[node name="Sprite" type="Sprite2D" parent="Layer0"]
+z_index = -50
+position = Vector2(160, 90)
+texture = ExtResource("1_5eyng")
+
+[node name="Layer1" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(320, 0)
+
+[node name="Sprite" type="Sprite2D" parent="Layer1"]
+self_modulate = Color(1, 1, 1, 0.498039)
+position = Vector2(160, 90)
+texture = ExtResource("1_kfpa8")
+
+[node name="Layer2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(320, 0)
+
+[node name="Sprite" type="Sprite2D" parent="Layer2"]
+z_index = -5
+position = Vector2(160, 90)
+texture = ExtResource("2_wkhmk")
+
+[node name="Layer3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(320, 0)
+
+[node name="Sprite" type="Sprite2D" parent="Layer3"]
+z_index = -10
+position = Vector2(160, 90)
+texture = ExtResource("3_ng023")
